@@ -1,0 +1,50 @@
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+::selection{
+  background: red;
+  color: white;
+}
+
+:root {
+  --primary-color: #000;
+  --primary-variant: #030303;
+  --secondary-color: #e93636;
+  --color-white: #ffffff;
+  --color-white-light: #ffffff33;
+  --container-width-sm: 90%;
+  --container-width-md: 86%;
+  --container-width-lg: 83%;
+  --transition: all 400ms ease;
+}
+
+body {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  background: var(--primary-color);
+  color: var(--color-white);
+  line-height: 1.7;
+}
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+button{
+  cursor: pointer;
+}
