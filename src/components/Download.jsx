@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import { device } from '../device'
 
 const Download = (props) => {
   return (
@@ -38,6 +39,22 @@ const Main = styled.div`
   height: fit-content;
   padding: 2rem;
   gap: 2rem;
+
+  @media screen and ${device.laptop} and (max-width: 1024px) {
+    flex-direction: row;
+  }
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
+  @media ${device.mobileL} {
+    flex-direction: column;
+  }
+  @media ${device.mobileM} {
+    flex-direction: column;
+  }
+  @media ${device.mobileS} {
+    flex-direction: column;
+  }
 `;
 const Row1 = styled.section`
   width: 100%;

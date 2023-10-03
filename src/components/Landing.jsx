@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import { device } from '../device.js'
 import HR from "./HR";
 import Download from "./Download";
 
@@ -72,6 +73,14 @@ const Section = styled.section`
     url(/images/netflix_background.jpg);
   background-size: cover;
   background-position: center;
+
+  @media ${device.laptopL} {
+    max-width: 1024px;
+  }
+
+  @media ${device.desktop} {
+    max-width: 1400px;
+  }
 `;
 
 const Top = styled.div`
