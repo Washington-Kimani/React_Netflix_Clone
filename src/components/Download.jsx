@@ -4,7 +4,7 @@ import { device } from '../device'
 
 const Download = (props) => {
   return (
-    <Main>
+    <Main className="container">
       <Row1>
         <div>
           <h1>Download your shows to watch offline</h1>
@@ -35,16 +35,15 @@ const Download = (props) => {
 const Main = styled.div`
   width: 100%;
   display: flex;
+  flex-basis: 50%;
   flex-direction: row-reverse;
   height: fit-content;
   padding: 2rem;
   gap: 2rem;
 
-  @media screen and ${device.laptop} and (max-width: 1024px) {
-    flex-direction: row;
-  }
   @media ${device.tablet} {
     flex-direction: row;
+    align-items: center;
   }
   @media ${device.mobileL} {
     flex-direction: column;
@@ -59,9 +58,7 @@ const Main = styled.div`
 const Row1 = styled.section`
   width: 100%;
   height: fit-content;
-  margin: auto 2rem;
   display: flex;
-  flex-basis: 50%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -70,7 +67,9 @@ const Row1 = styled.section`
 
   div {
     width: 100%;
-
+    height: 100%;
+    margin-top: calc(20%);
+    
     h1 {
       width: 100%;
       margin-bottom: 20px;
@@ -82,6 +81,19 @@ const Row1 = styled.section`
       margin-top: 8px;
       font-size: 20px;
       font-weight: 500;
+    }
+
+    @media ${device.mobileM} {
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1,
+        p {
+          text-align: center;
+        }
+      }
     }
   }
 `;
@@ -96,15 +108,15 @@ const Row2 = styled.section`
 
 const Phone = styled.div`
   position: relative;
-  display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
   position: relative;
 
   img {
-    width: 65%;
+    width: 100%;
     margin: auto;
+    display: block;
     margin-bottom: 30px;
     z-index: 1;
   }
@@ -142,7 +154,7 @@ const Contain = styled.div`
   background: rgb(0, 0, 0);
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 70%;
   min-width: 15rem;
   padding: 0.25rem 0.65rem;
   border: 2px solid rgba(128, 128, 128, 0.7);

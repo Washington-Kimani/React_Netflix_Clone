@@ -48,3 +48,8 @@ body {
 button{
   cursor: pointer;
 }
+@media (max-width: 425px){
+  h1,p,h3{
+    text-align: center;
+  }
+}
